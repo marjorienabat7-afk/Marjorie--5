@@ -1,0 +1,630 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e9d5ff,
+            #ffffff,
+            #fbcfe8
+        );
+
+    color: #581c87;
+
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.container {
+
+    width: 92%;
+
+    max-width: 1100px;
+
+    margin: 30px auto;
+
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+
+    text-align: center;
+
+    margin-bottom: 25px;
+
+}
+
+
+.header h1 {
+
+    margin-bottom: 8px;
+
+    color: #7e22ce;
+
+    font-size: 38px;
+
+    font-weight: bold;
+
+}
+
+
+.header p {
+
+    margin-top: 0;
+
+    color: #a21caf;
+
+    font-size: 18px;
+
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.status {
+
+    padding: 12px 18px;
+
+    margin-bottom: 20px;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    font-weight: bold;
+
+    border: 1px solid #e9d5ff;
+
+    background: #faf5ff;
+
+}
+
+
+.status-connected {
+
+    color: #15803d;
+
+    background: #f0fdf4;
+
+    border-color: #bbf7d0;
+
+}
+
+
+.status-error {
+
+    color: #b91c1c;
+
+    background: #fef2f2;
+
+    border-color: #fecaca;
+
+}
+
+
+/* =========================================
+   CURRENT SENSOR SECTION
+========================================= */
+
+.current-section {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+
+    gap: 20px;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* =========================================
+   SENSOR CARD
+========================================= */
+
+.sensor-card {
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 10px 25px
+        rgba(126, 34, 206, 0.15);
+
+    border: 1px solid #e9d5ff;
+
+}
+
+
+.sensor-card h2 {
+
+    margin-top: 0;
+
+    color: #7e22ce;
+
+    font-size: 20px;
+
+}
+
+
+.sensor-value {
+
+    font-size: 38px;
+
+    font-weight: bold;
+
+    color: #9333ea;
+
+    margin-top: 15px;
+
+}
+
+
+/* =========================================
+   GENERAL CARD
+========================================= */
+
+.card {
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+        0 10px 25px
+        rgba(126, 34, 206, 0.15);
+
+    border: 1px solid #e9d5ff;
+
+}
+
+
+.card h2 {
+
+    margin-top: 0;
+
+    color: #7e22ce;
+
+}
+
+
+/* =========================================
+   SECTION HEADER
+========================================= */
+
+.section-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.section-header h2 {
+
+    margin: 0;
+
+}
+
+
+/* =========================================
+   SELECT
+========================================= */
+
+select {
+
+    padding:
+        10px 14px;
+
+    border:
+        2px solid #c084fc;
+
+    border-radius: 10px;
+
+    background: #faf5ff;
+
+    color: #581c87;
+
+    font-size: 14px;
+
+    outline: none;
+
+}
+
+
+select:focus {
+
+    border-color: #9333ea;
+
+    box-shadow:
+        0 0 8px
+        rgba(147, 51, 234, .2);
+
+}
+
+
+/* =========================================
+   CHART
+========================================= */
+
+.chart-container {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 430px;
+
+}
+
+
+/* =========================================
+   HISTORY
+========================================= */
+
+.history-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+}
+
+
+.history-header h2 {
+
+    margin: 0;
+
+}
+
+
+.history-controls {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    margin: 20px 0;
+
+}
+
+
+.history-controls label {
+
+    color: #581c87;
+
+    font-weight: bold;
+
+}
+
+
+#recordCount {
+
+    color: #a21caf;
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.purple-button {
+
+    display: inline-block;
+
+    padding:
+        11px 20px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #c084fc,
+            #9333ea
+        );
+
+    color: white;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: .3s;
+
+    box-shadow:
+        0 5px 15px
+        rgba(126, 34, 206, .20);
+
+}
+
+
+.purple-button:hover {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 7px 18px
+        rgba(126, 34, 206, .30);
+
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.table-wrapper {
+
+    width: 100%;
+
+    overflow-x: auto;
+
+}
+
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-top: 10px;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+}
+
+
+thead {
+
+    background:
+        linear-gradient(
+            135deg,
+            #a855f7,
+            #c084fc
+        );
+
+    color: white;
+
+}
+
+
+th {
+
+    padding: 14px;
+
+    text-align: center;
+
+    font-size: 15px;
+
+}
+
+
+td {
+
+    padding: 12px;
+
+    text-align: center;
+
+    border-bottom:
+        1px solid #e9d5ff;
+
+    color: #581c87;
+
+}
+
+
+tbody tr:nth-child(even) {
+
+    background: #faf5ff;
+
+}
+
+
+tbody tr:hover {
+
+    background: #f3e8ff;
+
+}
+
+
+/* =========================================
+   HIDDEN
+========================================= */
+
+.hidden {
+
+    display: none;
+
+}
+
+
+/* =========================================
+   WIFI
+========================================= */
+
+.wifi-section p {
+
+    color: #a21caf;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+
+    text-align: center;
+
+    color: #a21caf;
+
+    padding:
+        10px 0 30px;
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .container {
+
+        width: 94%;
+
+    }
+
+
+    .header h1 {
+
+        font-size: 30px;
+
+    }
+
+
+    .current-section {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .section-header {
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+    }
+
+
+    .section-header select {
+
+        width: 100%;
+
+    }
+
+
+    .history-header {
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+    }
+
+
+    .chart-container {
+
+        height: 350px;
+
+    }
+
+
+    .sensor-value {
+
+        font-size: 32px;
+
+    }
+
+
+    .history-controls {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+
+    .history-controls select {
+
+        width: 100%;
+
+    }
+
+
+    table {
+
+        display: block;
+
+        overflow-x: auto;
+
+        white-space: nowrap;
+
+    }
+
+}
